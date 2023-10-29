@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from "react";
+import React,{useState} from "react";
 import { DataGrid } from "@material-ui/data-grid";
 import axios from "axios";
 import Navbar from '../Components/Navbar';

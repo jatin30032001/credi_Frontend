@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import styles from "./Form.module.scss";
-import { Fab, TextField } from "@mui/material";
+import { TextField } from "@mui/material";
 import DoneIcon from "@mui/icons-material/Done";
 import { MuiTelInput } from "mui-tel-input";
 import Checkbox from "@mui/material/Checkbox";
@@ -16,7 +16,7 @@ const Form = () => {
   const [ReEmail, setReEmail] = useState("-1");
   const [Mobile, setMobile] = useState("+65");
   const [File, setFile] = useState("-1");
-  const [checked, setChecked] = useState(false);
+  // const [checked, setChecked] = useState(false);
 
   const [validation, setValidation] = useState({
     UEN: false,
@@ -57,7 +57,6 @@ const Form = () => {
   const handleChange = (event) => {
     console.log(event);
 
-    setChecked(event.target.checked);
     setValidation((prev) => ({
       ...prev,
       tnc: event.target.checked,
