@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.app{
+  position: relative;
+}
+
+.table{
+  min-height: 100vh;
+}
