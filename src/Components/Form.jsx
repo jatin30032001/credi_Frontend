@@ -76,7 +76,7 @@ const Form = () => {
     const config={headers:{"Content-Type":"multipart/form-data"}};
     try{
     const response = await axios.post(`https://credi-backend-fqtk-6h456mqk3-jrsaini2090-gmailcom.vercel.app/add`,formData,config);
-    window.location.href ="http://localhost:3000/table";
+    window.location.href ="https://credi-backend-fqtk-6h456mqk3-jrsaini2090-gmailcom.vercel.app/get";
     console.log(response);
     }catch(err){
       console.log(err);
