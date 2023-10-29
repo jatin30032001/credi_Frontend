@@ -6,6 +6,8 @@ import { MuiTelInput } from "mui-tel-input";
 import Checkbox from "@mui/material/Checkbox";
 import Button from "@mui/material/Button";
 import axios from "axios";
+import {useNavigate} from 'react-router-dom'
+
 
 const Form = () => {
   const [UEN, setUEN] = useState("-1");
@@ -17,7 +19,7 @@ const Form = () => {
   const [Mobile, setMobile] = useState("+65");
   const [File, setFile] = useState("-1");
   // const [checked, setChecked] = useState(false);
-
+  const navigate = useNavigate();
   const [validation, setValidation] = useState({
     UEN: false,
     CName: false,
@@ -76,7 +78,7 @@ const Form = () => {
     const config={headers:{"Content-Type":"multipart/form-data"}};
     try{
     const response = await axios.post(`https://credi-backend-fqtk-6h456mqk3-jrsaini2090-gmailcom.vercel.app/add`,formData,config);
-    window.location.href ="https://653e788ac83d4d0007f3405e--storied-centaur-f3d36b.netlify.app/table";
+    navigate('/table');
     console.log(response);
     }catch(err){
       console.log(err);
